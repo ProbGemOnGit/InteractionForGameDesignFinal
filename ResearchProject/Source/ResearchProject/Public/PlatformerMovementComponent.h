@@ -54,13 +54,16 @@ public:
 	//Jump
 	void StartJump();
 	void StopJump();
-	UPROPERTY(EditDefaultsOnly, Category = "Jump") float maxJumpHoldTime = .03f;
-	UPROPERTY(EditDefaultsOnly, Category = "Jump") int NumberOfJumps = 1;
+	UPROPERTY(EditDefaultsOnly, Category = "Jumping") float maxJumpHoldTime = .03f;
+	UPROPERTY(EditDefaultsOnly, Category = "Jumping") float NewAirControl = 1.f;
+	UPROPERTY(EditDefaultsOnly, Category = "Jumping") float NewAirControlBoost = 25.f;
+	UPROPERTY(EditDefaultsOnly, Category = "Jumping") int NumberOfJumps = 1;
 	bool IsJumping = false;
 
 	//Wall Slide
 	UPROPERTY(EditDefaultsOnly, Category = "Wall Slide") float MinHeightToSlide = 200.f;
-	UPROPERTY(EditDefaultsOnly, Category = "Wall Slide") float WallJumpOffForce = 1200.f;
+	UPROPERTY(EditDefaultsOnly, Category = "Wall Slide") float WallJumpOffHorizontalForce = 1200.f;
+	UPROPERTY(EditDefaultsOnly, Category = "Wall Slide") float WallJumpOffVerticalForce = 1200.f;
 	UPROPERTY(EditDefaultsOnly, Category = "Wall Slide") float MaxVerticalWallSlideSpeed = 0.f;
 	UPROPERTY(EditDefaultsOnly, Category = "Wall Slide") UCurveFloat* WallSlideGravityCurve;
 	UPROPERTY(EditDefaultsOnly, Category = "MovementMode") FString MovementModeString = "Start";
@@ -123,7 +126,8 @@ public:
 	virtual bool DoJump(bool bReplayingMoves) override;
 	virtual bool CanAttemptJump() const override;
 
-	void IsLookingRight(bool lookingRight) const;
+	void IsLookingRight(bool lookingRight);
+	bool LookingRight = true;
 
 protected:
 	virtual void InitializeComponent() override;
@@ -159,6 +163,7 @@ private:
 	void SlideJump();
 	float HoldTimeForJump = 0;
 	void StartJumpTimers();
+	bool IsWallJumping = false;
 
 	//Slide
 	void EnterSlide();

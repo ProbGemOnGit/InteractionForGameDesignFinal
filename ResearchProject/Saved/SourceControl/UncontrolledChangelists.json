@@ -1,0 +1,21 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/Characters/BP_ResearchProjectCharacter.uasset",
+				"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/Characters/BP_SetSpawnLocation.uasset",
+				"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/Interfaces/BPI_SetSpawnLocation.uasset",
+				"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/7/7E/F3UGCWUHXMEARIKLUVOI2V.uasset",
+				"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/Interfaces/BPI_Player.uasset",
+				"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/EvnirementalBlueprints/BP_SetSpawnLocation.uasset",
+				"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/EvnirementalBlueprints/BP_EnvirmentalDamageHitBox.uasset",
+				"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/1/BI/TLTQ20OP48GRKR1V5PXN8U.uasset",
+				"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/4/8H/730M4XBBSL0WHVYUQDPAK0.uasset",
+				"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/7/YJ/44TKQPOIZ763CZVU9SW8MC.uasset"
+			]
+		}
+	]
+}

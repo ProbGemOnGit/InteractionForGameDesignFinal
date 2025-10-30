@@ -104,12 +104,21 @@ void AResearchProjectCharacter::AirDash()
 
 void AResearchProjectCharacter::Move(const FInputActionValue& Value)
 {
-	if (!CanMove)
-	{
-
+	if (!CanMove) {
+		return;
 	}
+
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
+
+	if (MovementVector.X > 0 && !PlatformerMovement->LookingRight)
+	{
+		//player turned right
+	}
+	else if (MovementVector.X < 0 && PlatformerMovement->LookingRight)
+	{
+		//player turned left
+	}
 
 	// route the input
 	DoMove(MovementVector);
@@ -122,10 +131,15 @@ void AResearchProjectCharacter::Look(const FInputActionValue& Value)
 
 }
 
+void AResearchProjectCharacter::SetCanMove(bool canMove)
+{
+	CanMove = canMove;
+}
+
 void AResearchProjectCharacter::DoMove(FVector2D movementVector)
 {
 
-	if (Controller == nullptr) {
+	if (Controller == nullptr || !CanMove) {
 		return;
 	}
 
@@ -186,3 +200,4 @@ FCollisionQueryParams AResearchProjectCharacter::GetQueryParams() const
 	return QueryParams;
 
 }
+

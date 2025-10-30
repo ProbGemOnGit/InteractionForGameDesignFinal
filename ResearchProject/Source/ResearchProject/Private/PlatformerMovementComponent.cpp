@@ -25,7 +25,8 @@ UPlatformerMovementComponent::UPlatformerMovementComponent() {
 	// Configure character movement
 	bOrientRotationToMovement = true;
 	RotationRate = FRotator(0.0f, 3072.0f, 0.0f);
-	AirControl = 1.0f;
+	AirControl = NewAirControl;
+	AirControlBoostMultiplier = NewAirControlBoost;
 	Mass = 500.0f;
 	JumpZVelocity = 1450.f;
 	MaxWalkSpeed = 700.f;
@@ -222,12 +223,15 @@ void UPlatformerMovementComponent::StartJump()
 
 	if (IsWallSliding())
 	{
-
 		IsJumping = true;
 		SetMovementMode(MOVE_Falling);
 		IsInWallSlide = true;
+		IsWallJumping = true;
 		Velocity += FVector((PlayerCharacter->GetActorForwardVector().X * -1 * WallJumpHorizontalBoost), 0.f, WallJumpVerticalBoost);
 		HoldTimeForJump = WallJumpHoldTime;
+		ACharacter* PlayerOwner = Cast<ACharacter>(GetOwner());
+		AResearchProjectCharacter* ResearchCharacter = Cast<AResearchProjectCharacter>(PlayerOwner);
+		ResearchCharacter->SetCanMove(false);
 		StartJumpTimers();
 		return;
 	}
@@ -267,21 +271,20 @@ void UPlatformerMovementComponent::Jump()
 		SetMovementMode(MOVE_Falling);
 		Velocity = FVector(Velocity.X, Velocity.Y, JumpForce);
 
-		if (bIsWallSliding)
+		if (bIsWallSliding || IsWallJumping)
 		{
 			FHitResult HitResult;
 			FCollisionQueryParams QueryParams = GetPlayerQueryParams();
 			const FVector Start = UpdatedComponent->GetComponentLocation();
-			GetWorld()->LineTraceSingleByProfile(HitResult, Start, EndForwardVector(Start), "BlockAll", QueryParams);
-			if (HitResult.IsValidBlockingHit())
-			{
-				SetMovementMode(MOVE_Falling);
-				Velocity += (HitResult.Normal * WallJumpOffForce);
-				JustJumped = true;
-				IsInWallSlide = false;
-				GetWorld()->GetTimerManager().ClearTimer(WallJumpTimer);
-				GetWorld()->GetTimerManager().SetTimer(WallJumpTimer, this, &UPlatformerMovementComponent::WallJumpTimerFinished, WallJumpCoolDown, false);
-			}
+
+			SetMovementMode(MOVE_Falling);
+			//Velocity += HitResult.Normal * FVector(WallJumpOffHorizontalForce, 0.f, WallJumpOffVerticalForce);
+			Velocity += FVector((PlayerCharacter->GetActorForwardVector().X * -1 * WallJumpOffHorizontalForce), 0.f, WallJumpOffVerticalForce);
+			JustJumped = true;
+			IsInWallSlide = false;
+			GetWorld()->GetTimerManager().ClearTimer(WallJumpTimer);
+			GetWorld()->GetTimerManager().SetTimer(WallJumpTimer, this, &UPlatformerMovementComponent::WallJumpTimerFinished, WallJumpCoolDown, false);
+
 		}
 	}
 }
@@ -289,7 +292,13 @@ void UPlatformerMovementComponent::Jump()
 void UPlatformerMovementComponent::StopJump()
 {
 	IsJumping = false;
+	IsWallJumping = false;
 	GetWorld()->GetTimerManager().ClearTimer(JumpTimer);
+	APlayerController* PlayerController = Cast<APlayerController>(CharacterOwner->GetController());
+	PlayerCharacter->EnableInput(PlayerController);
+	ACharacter* PlayerOwner = Cast<ACharacter>(GetOwner());
+	AResearchProjectCharacter* ResearchCharacter = Cast<AResearchProjectCharacter>(PlayerOwner);
+	ResearchCharacter->SetCanMove(true);
 }
 
 bool UPlatformerMovementComponent::CanAttemptJump() const
@@ -320,7 +329,7 @@ bool UPlatformerMovementComponent::DoJump(bool bReplayMoves)
 			if (HitResult.IsValidBlockingHit())
 			{
 				SetMovementMode(MOVE_Falling);
-				Velocity += (HitResult.Normal * WallJumpOffForce);
+				Velocity += (HitResult.Normal * 0);
 				JustJumped = true;
 				GetWorld()->GetTimerManager().ClearTimer(WallJumpTimer);
 				GetWorld()->GetTimerManager().SetTimer(WallJumpTimer, this, &UPlatformerMovementComponent::WallJumpTimerFinished, WallJumpCoolDown, false);
@@ -336,6 +345,9 @@ bool UPlatformerMovementComponent::DoJump(bool bReplayMoves)
 void UPlatformerMovementComponent::WallJumpTimerFinished()
 {
 	JustJumped = false;
+	//APlayerController* PlayerController = Cast<APlayerController>(CharacterOwner->GetController());
+
+	//PlayerCharacter->DisableInput(PlayerController);
 }
 #pragma endregion
 
@@ -826,17 +838,19 @@ void UPlatformerMovementComponent::OnMantleAnimFinished()
 
 #pragma region "Helpers"
 
-void UPlatformerMovementComponent::IsLookingRight(bool LookingRight) const
+void UPlatformerMovementComponent::IsLookingRight(bool lookingRight) 
 {
-	if (LookingRight) 
+	if (lookingRight) 
 	{
 		FRotator NewRotation = FRotator(0.f, 0.f, 0.f);
 		PlayerCharacter->SetActorRotation(NewRotation);
+		LookingRight = true;
 	}
 	else 
 	{
 		FRotator NewRotation = FRotator(0.f, 180.f, 0.f);
 		PlayerCharacter->SetActorRotation(NewRotation);
+		LookingRight = false;
 	}
 }
 

@@ -77,6 +77,7 @@ public:
 	FCollisionQueryParams GetQueryParams() const;
 
 	bool CanMove = true;
+	void SetCanMove(bool canMove);
 
 protected:
 

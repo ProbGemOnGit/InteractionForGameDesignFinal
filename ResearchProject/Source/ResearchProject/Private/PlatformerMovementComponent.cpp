@@ -424,7 +424,7 @@ void UPlatformerMovementComponent::EnterSlide()
 	}
 
 	SlidingTime = 0.f;
-	Velocity += Velocity.GetSafeNormal2D() * EnterSlideImpulse;
+	Velocity = Velocity.GetSafeNormal2D() * EnterSlideImpulse;
 	IsInSlide = true;
 
 	SetCollisionSizeToSlidingDimension();

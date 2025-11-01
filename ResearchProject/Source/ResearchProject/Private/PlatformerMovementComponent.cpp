@@ -11,6 +11,8 @@
 #include "Engine/World.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/TimelineComponent.h"
+#include "EnhancedInputComponent.h"
+#include "EnhancedInputSubsystems.h"
 #include "TimerManager.h"
 #include "GameFramework/Character.h"
 
@@ -75,7 +77,7 @@ void UPlatformerMovementComponent::UpdateCharacterStateBeforeMovement(float Delt
 	TryWallSlide();
 
 	//Mantle
-	TryMantle();
+	//TryMantle();
 
 	//Slide
 	FFindFloorResult FloorHit;
@@ -113,6 +115,24 @@ void UPlatformerMovementComponent::UpdateCharacterStateBeforeMovement(float Delt
 		JumpsLeft = NumberOfJumps - 1;
 	}
 
+	if (!IsSliding() && !IsDashing() && !IsWallJumping && !IsJumping && IsFalling())
+	{
+		ACharacter* PlayerOwner = Cast<ACharacter>(GetOwner());
+		AResearchProjectCharacter* ResearchCharacter = Cast<AResearchProjectCharacter>(PlayerOwner);
+		FString VectorAsString = ResearchCharacter->MovementValue.ToString();
+		GEngine->AddOnScreenDebugMessage(
+-1, // Key (-1 means add a new message)
+5.0f, // Duration in seconds
+FColor::Green, // Text color
+FString::Printf(TEXT("Player Velocity: %s"), *VectorAsString));
+
+
+		if (FMath::Abs(ResearchCharacter->MovementValue.X) <= .5)
+		{
+			Velocity = FVector::ZeroVector;
+			Acceleration = FVector::ZeroVector;
+		}
+	}
 
 	//GEngine->AddOnScreenDebugMessage(
 	//	-1, // Key (-1 means add a new message)
@@ -189,7 +209,7 @@ void UPlatformerMovementComponent::StartJump()
 	HoldTimeForJump = JumpHoldTime;
 	if (IsInSlide)
 	{
-		if (CanSlideJump)
+		if (CanSlideJump && HasSlideJump)
 		{
 			if (!RestoreDefaultCollisionDimension())
 			{
@@ -221,7 +241,7 @@ void UPlatformerMovementComponent::StartJump()
 		return;
 	}
 
-	if (IsWallSliding())
+	if (IsWallSliding() && HasWallJump)
 	{
 		IsJumping = true;
 		SetMovementMode(MOVE_Falling);
@@ -355,12 +375,12 @@ void UPlatformerMovementComponent::WallJumpTimerFinished()
 
 void UPlatformerMovementComponent::DashStart()
 {
-	if (IsMovingOnGround())
+	if (IsMovingOnGround() || !IsSliding())
 	{
 		return;
 	}
 
-	if (!CanAirDash)
+	if (!CanAirDash || !HasAirDash)
 	{
 		return;
 	}
@@ -418,7 +438,7 @@ bool UPlatformerMovementComponent::CanSlide(FFindFloorResult& FloorHit) const
 
 void UPlatformerMovementComponent::EnterSlide()
 {
-	if (!CanEnterSlide)
+	if (!CanEnterSlide || !HasSlide)
 	{
 		return;
 	}
@@ -573,7 +593,7 @@ bool UPlatformerMovementComponent::IsTouchingWall() const
 
 void UPlatformerMovementComponent::TryWallSlide() 
 {
-	if (!IsFalling()) 
+	if (!IsFalling() || !HasWallJump) 
 	{
 		return;
 	}
@@ -729,7 +749,7 @@ void UPlatformerMovementComponent::TryMantle()
 	FHitResult FrontResult;
 	FVector FrontStart = ComponentLocation + FVector::UpVector * MantleUpOffsetDistance;
 	FVector ForwardVector = UpdatedComponent->GetForwardVector().GetSafeNormal2D();
-	float CheckDistance = FMath::Clamp(Velocity | ForwardVector, GetCapsuleRadius() + 30.f, MaxFrontCheckDistance);
+	float CheckDistance = FMath::Clamp(PlayerCharacter->GetActorForwardVector().X, GetCapsuleRadius() + 30.f, MaxFrontCheckDistance);
 	FVector FrontEnd = FrontStart + ForwardVector * CheckDistance;
 
 	//debug front red line
@@ -802,7 +822,9 @@ void UPlatformerMovementComponent::TryMantle()
 	// debug capsule where we want to be
 	//DrawDebugCapsule(GetWorld(), TransitionTarget, GetCapsuleHalfHeight(), GetCapsuleRadius(), FQuat::Identity, FColor::Green, false, 2.f);
 
-
+		// apply transition to root motion
+	Acceleration = FVector::ZeroVector;
+	Velocity = FVector::ZeroVector;
 	// perform transition to mantle
 	APlayerController* PlayerController = Cast<APlayerController>(CharacterOwner->GetController());
 

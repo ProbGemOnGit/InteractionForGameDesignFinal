@@ -248,16 +248,6 @@ struct Z_Construct_UClass_AResearchProjectCharacter_Statics
 		{ "ToolTip", "Jump Input Action" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveAction_MetaData[] = {
-		{ "Category", "Input" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/** Move Input Action */" },
-#endif
-		{ "ModuleRelativePath", "ResearchProjectCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Move Input Action" },
-#endif
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LookAction_MetaData[] = {
 		{ "Category", "Input" },
 #if !UE_BUILD_SHIPPING
@@ -292,6 +282,20 @@ struct Z_Construct_UClass_AResearchProjectCharacter_Statics
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "ResearchProjectCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveAction_MetaData[] = {
+		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Move Input Action */" },
+#endif
+		{ "ModuleRelativePath", "ResearchProjectCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Move Input Action" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AirDirectionControl_MetaData[] = {
+		{ "Category", "AirControl" },
+		{ "ModuleRelativePath", "ResearchProjectCharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PlatformerMovement_MetaData[] = {
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "ResearchProjectCharacter.h" },
@@ -302,11 +306,12 @@ struct Z_Construct_UClass_AResearchProjectCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PostProcessComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DefaultMappingContext;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_JumpAction;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LookAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MouseLookAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SlideAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AirDashAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_AirDirectionControl;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PlatformerMovement;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -326,11 +331,12 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProje
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_PostProcessComponent = { "PostProcessComponent", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, PostProcessComponent), Z_Construct_UClass_UPostProcessComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PostProcessComponent_MetaData), NewProp_PostProcessComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_DefaultMappingContext = { "DefaultMappingContext", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, DefaultMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultMappingContext_MetaData), NewProp_DefaultMappingContext_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_JumpAction = { "JumpAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, JumpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JumpAction_MetaData), NewProp_JumpAction_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveAction_MetaData), NewProp_MoveAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LookAction_MetaData), NewProp_LookAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_MouseLookAction = { "MouseLookAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, MouseLookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MouseLookAction_MetaData), NewProp_MouseLookAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_SlideAction = { "SlideAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, SlideAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SlideAction_MetaData), NewProp_SlideAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_AirDashAction = { "AirDashAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, AirDashAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AirDashAction_MetaData), NewProp_AirDashAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveAction_MetaData), NewProp_MoveAction_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_AirDirectionControl = { "AirDirectionControl", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, AirDirectionControl), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AirDirectionControl_MetaData), NewProp_AirDirectionControl_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_PlatformerMovement = { "PlatformerMovement", nullptr, (EPropertyFlags)0x0144000000082008, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, PlatformerMovement), Z_Construct_UClass_UPlatformerMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlatformerMovement_MetaData), NewProp_PlatformerMovement_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AResearchProjectCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_CameraBoom,
@@ -338,11 +344,12 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AResearch
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_PostProcessComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_DefaultMappingContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_JumpAction,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_MoveAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_LookAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_MouseLookAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_SlideAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_AirDashAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_MoveAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_AirDirectionControl,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_PlatformerMovement,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AResearchProjectCharacter_Statics::PropPointers) < 2048);
@@ -382,10 +389,10 @@ AResearchProjectCharacter::~AResearchProjectCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h__Script_ResearchProject_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AResearchProjectCharacter, AResearchProjectCharacter::StaticClass, TEXT("AResearchProjectCharacter"), &Z_Registration_Info_UClass_AResearchProjectCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AResearchProjectCharacter), 589518051U) },
+		{ Z_Construct_UClass_AResearchProjectCharacter, AResearchProjectCharacter::StaticClass, TEXT("AResearchProjectCharacter"), &Z_Registration_Info_UClass_AResearchProjectCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AResearchProjectCharacter), 1792917672U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h__Script_ResearchProject_630953970(TEXT("/Script/ResearchProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h__Script_ResearchProject_2062868705(TEXT("/Script/ResearchProject"),
 	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

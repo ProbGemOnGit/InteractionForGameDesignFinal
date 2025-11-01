@@ -50,6 +50,11 @@ public:
 	UFUNCTION(BlueprintPure) bool IsSliding() const { return IsCustomMovementMode(CMOVE_Slide); }
 	UFUNCTION(BlueprintPure) bool IsDashing() const { return IsCustomMovementMode(CMOVE_AirDash); }
 	
+	//Ability Bools
+	UPROPERTY(BlueprintReadWrite, Category = "Ability Bool") bool HasSlide = false;
+	UPROPERTY(BlueprintReadWrite, Category = "Ability Bool") bool HasWallJump = false;
+	UPROPERTY(BlueprintReadWrite, Category = "Ability Bool") bool HasSlideJump = false;
+	UPROPERTY(BlueprintReadWrite, Category = "Ability Bool") bool HasAirDash = false;
 
 	//Jump
 	void StartJump();
@@ -133,6 +138,7 @@ protected:
 	virtual void InitializeComponent() override;
 	virtual void PhysCustom(float deltaTime, int32 Iterations) override;
 	virtual void TickComponent(float deltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
 
 private:
 

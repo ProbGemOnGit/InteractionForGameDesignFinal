@@ -465,6 +465,28 @@ struct Z_Construct_UClass_UPlatformerMovementComponent_Statics
 		{ "IncludePath", "PlatformerMovementComponent.h" },
 		{ "ModuleRelativePath", "Public/PlatformerMovementComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HasSlide_MetaData[] = {
+		{ "Category", "Ability Bool" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//Ability Bools\n" },
+#endif
+		{ "ModuleRelativePath", "Public/PlatformerMovementComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Ability Bools" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HasWallJump_MetaData[] = {
+		{ "Category", "Ability Bool" },
+		{ "ModuleRelativePath", "Public/PlatformerMovementComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HasSlideJump_MetaData[] = {
+		{ "Category", "Ability Bool" },
+		{ "ModuleRelativePath", "Public/PlatformerMovementComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HasAirDash_MetaData[] = {
+		{ "Category", "Ability Bool" },
+		{ "ModuleRelativePath", "Public/PlatformerMovementComponent.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_maxJumpHoldTime_MetaData[] = {
 		{ "Category", "Jumping" },
 		{ "ModuleRelativePath", "Public/PlatformerMovementComponent.h" },
@@ -661,6 +683,14 @@ struct Z_Construct_UClass_UPlatformerMovementComponent_Statics
 		{ "ModuleRelativePath", "Public/PlatformerMovementComponent.h" },
 	};
 #endif // WITH_METADATA
+	static void NewProp_HasSlide_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_HasSlide;
+	static void NewProp_HasWallJump_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_HasWallJump;
+	static void NewProp_HasSlideJump_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_HasSlideJump;
+	static void NewProp_HasAirDash_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_HasAirDash;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_maxJumpHoldTime;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_NewAirControl;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_NewAirControlBoost;
@@ -720,6 +750,26 @@ struct Z_Construct_UClass_UPlatformerMovementComponent_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+void Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasSlide_SetBit(void* Obj)
+{
+	((UPlatformerMovementComponent*)Obj)->HasSlide = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasSlide = { "HasSlide", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UPlatformerMovementComponent), &Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasSlide_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HasSlide_MetaData), NewProp_HasSlide_MetaData) };
+void Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasWallJump_SetBit(void* Obj)
+{
+	((UPlatformerMovementComponent*)Obj)->HasWallJump = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasWallJump = { "HasWallJump", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UPlatformerMovementComponent), &Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasWallJump_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HasWallJump_MetaData), NewProp_HasWallJump_MetaData) };
+void Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasSlideJump_SetBit(void* Obj)
+{
+	((UPlatformerMovementComponent*)Obj)->HasSlideJump = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasSlideJump = { "HasSlideJump", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UPlatformerMovementComponent), &Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasSlideJump_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HasSlideJump_MetaData), NewProp_HasSlideJump_MetaData) };
+void Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasAirDash_SetBit(void* Obj)
+{
+	((UPlatformerMovementComponent*)Obj)->HasAirDash = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasAirDash = { "HasAirDash", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UPlatformerMovementComponent), &Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasAirDash_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HasAirDash_MetaData), NewProp_HasAirDash_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_maxJumpHoldTime = { "maxJumpHoldTime", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlatformerMovementComponent, maxJumpHoldTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_maxJumpHoldTime_MetaData), NewProp_maxJumpHoldTime_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_NewAirControl = { "NewAirControl", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlatformerMovementComponent, NewAirControl), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NewAirControl_MetaData), NewProp_NewAirControl_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_NewAirControlBoost = { "NewAirControlBoost", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlatformerMovementComponent, NewAirControlBoost), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NewAirControlBoost_MetaData), NewProp_NewAirControlBoost_MetaData) };
@@ -762,6 +812,10 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlatformerMove
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_SlideVerticalJumpForce = { "SlideVerticalJumpForce", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlatformerMovementComponent, SlideVerticalJumpForce), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SlideVerticalJumpForce_MetaData), NewProp_SlideVerticalJumpForce_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_SlideCooldown = { "SlideCooldown", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlatformerMovementComponent, SlideCooldown), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SlideCooldown_MetaData), NewProp_SlideCooldown_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlatformerMovementComponent_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasSlide,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasWallJump,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasSlideJump,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_HasAirDash,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_maxJumpHoldTime,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_NewAirControl,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_NewAirControlBoost,
@@ -844,10 +898,10 @@ struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesign
 		{ ECustomMovementMode_StaticEnum, TEXT("ECustomMovementMode"), &Z_Registration_Info_UEnum_ECustomMovementMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 660532628U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlatformerMovementComponent, UPlatformerMovementComponent::StaticClass, TEXT("UPlatformerMovementComponent"), &Z_Registration_Info_UClass_UPlatformerMovementComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlatformerMovementComponent), 3213710759U) },
+		{ Z_Construct_UClass_UPlatformerMovementComponent, UPlatformerMovementComponent::StaticClass, TEXT("UPlatformerMovementComponent"), &Z_Registration_Info_UClass_UPlatformerMovementComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlatformerMovementComponent), 927847009U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h__Script_ResearchProject_2927049856(TEXT("/Script/ResearchProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h__Script_ResearchProject_1963605261(TEXT("/Script/ResearchProject"),
 	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h__Script_ResearchProject_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h__Script_ResearchProject_Statics::EnumInfo));

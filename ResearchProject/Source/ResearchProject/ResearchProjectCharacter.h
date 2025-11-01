@@ -50,9 +50,6 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* JumpAction;
 
-	/** Move Input Action */
-	UPROPERTY(EditAnywhere, Category="Input")
-	UInputAction* MoveAction;
 
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, Category="Input")
@@ -76,8 +73,15 @@ public:
 
 	FCollisionQueryParams GetQueryParams() const;
 
+	/** Move Input Action */
+	UPROPERTY(EditAnywhere, Category = "Input")
+	UInputAction* MoveAction;
+
 	bool CanMove = true;
 	void SetCanMove(bool canMove);
+	FVector2D MovementValue;
+
+	UPROPERTY(EditAnywhere, Category = "AirControl") float AirDirectionControl = 2.f;
 
 protected:
 
@@ -98,6 +102,8 @@ protected:
 
 	//AirDash
 	void AirDash();
+
+	void StopMove();
 
 	virtual void BeginPlay() override;
 

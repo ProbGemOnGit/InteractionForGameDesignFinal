@@ -82,6 +82,7 @@ void AResearchProjectCharacter::SetupPlayerInputComponent(UInputComponent* Playe
 
 		// Moving
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AResearchProjectCharacter::Move);
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Canceled, this, &AResearchProjectCharacter::StopMove);
 		EnhancedInputComponent->BindAction(MouseLookAction, ETriggerEvent::Triggered, this, &AResearchProjectCharacter::Look);
 
 		//Sliding
@@ -102,6 +103,11 @@ void AResearchProjectCharacter::AirDash()
 	PlatformerMovement->DashStart();
 }
 
+void AResearchProjectCharacter::StopMove()
+{
+	MovementValue = FVector2D::ZeroVector;
+}
+
 void AResearchProjectCharacter::Move(const FInputActionValue& Value)
 {
 	if (!CanMove) {
@@ -110,14 +116,23 @@ void AResearchProjectCharacter::Move(const FInputActionValue& Value)
 
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
+	MovementValue = MovementVector;
 
 	if (MovementVector.X > 0 && !PlatformerMovement->LookingRight)
 	{
 		//player turned right
+		if (PlatformerMovement->IsFalling())
+		{
+			PlatformerMovement->Velocity.X = (PlatformerMovement->Velocity.X / AirDirectionControl) * -1;
+		}
 	}
 	else if (MovementVector.X < 0 && PlatformerMovement->LookingRight)
 	{
 		//player turned left
+		if (PlatformerMovement->IsFalling())
+		{
+			PlatformerMovement->Velocity.X = (PlatformerMovement->Velocity.X / AirDirectionControl) * -1;
+		}
 	}
 
 	// route the input

@@ -82,7 +82,7 @@ void AResearchProjectCharacter::SetupPlayerInputComponent(UInputComponent* Playe
 
 		// Moving
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AResearchProjectCharacter::Move);
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Canceled, this, &AResearchProjectCharacter::StopMove);
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Completed, this, &AResearchProjectCharacter::StopMove);
 		EnhancedInputComponent->BindAction(MouseLookAction, ETriggerEvent::Triggered, this, &AResearchProjectCharacter::Look);
 
 		//Sliding
@@ -105,7 +105,7 @@ void AResearchProjectCharacter::AirDash()
 
 void AResearchProjectCharacter::StopMove()
 {
-	MovementValue = FVector2D::ZeroVector;
+	MovementValue.X = 0.f;
 }
 
 void AResearchProjectCharacter::Move(const FInputActionValue& Value)

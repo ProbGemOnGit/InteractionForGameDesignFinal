@@ -121,16 +121,15 @@ void UPlatformerMovementComponent::UpdateCharacterStateBeforeMovement(float Delt
 		AResearchProjectCharacter* ResearchCharacter = Cast<AResearchProjectCharacter>(PlayerOwner);
 		FString VectorAsString = ResearchCharacter->MovementValue.ToString();
 		GEngine->AddOnScreenDebugMessage(
--1, // Key (-1 means add a new message)
-5.0f, // Duration in seconds
-FColor::Green, // Text color
-FString::Printf(TEXT("Player Velocity: %s"), *VectorAsString));
-
+			-1, // Key (-1 means add a new message)
+			5.0f, // Duration in seconds
+			FColor::Green, // Text color
+			FString::Printf(TEXT("Player Velocity: %s"), *VectorAsString));
 
 		if (FMath::Abs(ResearchCharacter->MovementValue.X) <= .5)
 		{
-			Velocity = FVector::ZeroVector;
-			Acceleration = FVector::ZeroVector;
+			Velocity.X = PlayerCharacter->GetActorForwardVector().X * 100.f;
+			Acceleration.X = 0.f;
 		}
 	}
 

@@ -82,6 +82,7 @@ public:
 	FVector2D MovementValue;
 
 	UPROPERTY(EditAnywhere, Category = "AirControl") float AirDirectionControl = 2.f;
+	UPROPERTY(BlueprintReadWrite, Category = "AirControl") USceneComponent* AttackEffeft;
 
 protected:
 
@@ -120,6 +121,11 @@ public:
 	/** Handles jump pressed inputs from either controls or UI interfaces */ 
 	UFUNCTION(BlueprintCallable, Category="Input")
 	virtual void DoJumpEnd();
+
+	UFUNCTION(BlueprintCallable, Category = "DetachEffect")
+	void DetachEffect();
+
+	
 
 private:
 	UPROPERTY(Transient) TObjectPtr<UPlatformerMovementComponent> PlatformerMovement;

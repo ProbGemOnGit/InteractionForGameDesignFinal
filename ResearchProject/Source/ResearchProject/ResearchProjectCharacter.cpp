@@ -121,6 +121,7 @@ void AResearchProjectCharacter::Move(const FInputActionValue& Value)
 	if (MovementVector.X > 0 && !PlatformerMovement->LookingRight)
 	{
 		//player turned right
+		DetachEffect();
 		if (PlatformerMovement->IsFalling())
 		{
 			PlatformerMovement->Velocity.X = (PlatformerMovement->Velocity.X / AirDirectionControl) * -1;
@@ -129,14 +130,24 @@ void AResearchProjectCharacter::Move(const FInputActionValue& Value)
 	else if (MovementVector.X < 0 && PlatformerMovement->LookingRight)
 	{
 		//player turned left
+		DetachEffect();
 		if (PlatformerMovement->IsFalling())
 		{
 			PlatformerMovement->Velocity.X = (PlatformerMovement->Velocity.X / AirDirectionControl) * -1;
 		}
 	}
 
+
 	// route the input
 	DoMove(MovementVector);
+}
+
+void AResearchProjectCharacter::DetachEffect()
+{
+	if (AttackEffeft != nullptr)
+	{
+		AttackEffeft->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+	}
 }
 
 void AResearchProjectCharacter::Look(const FInputActionValue& Value)

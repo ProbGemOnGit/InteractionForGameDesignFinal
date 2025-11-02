@@ -16,6 +16,7 @@ COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UPostProcessComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
@@ -24,6 +25,36 @@ RESEARCHPROJECT_API UClass* Z_Construct_UClass_AResearchProjectCharacter_NoRegis
 RESEARCHPROJECT_API UClass* Z_Construct_UClass_UPlatformerMovementComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ResearchProject();
 // ********** End Cross Module References **********************************************************
+
+// ********** Begin Class AResearchProjectCharacter Function DetachEffect **************************
+struct Z_Construct_UFunction_AResearchProjectCharacter_DetachEffect_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "DetachEffect" },
+		{ "ModuleRelativePath", "ResearchProjectCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AResearchProjectCharacter_DetachEffect_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AResearchProjectCharacter, nullptr, "DetachEffect", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AResearchProjectCharacter_DetachEffect_Statics::Function_MetaDataParams), Z_Construct_UFunction_AResearchProjectCharacter_DetachEffect_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_AResearchProjectCharacter_DetachEffect()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AResearchProjectCharacter_DetachEffect_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AResearchProjectCharacter::execDetachEffect)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DetachEffect();
+	P_NATIVE_END;
+}
+// ********** End Class AResearchProjectCharacter Function DetachEffect ****************************
 
 // ********** Begin Class AResearchProjectCharacter Function DoJumpEnd *****************************
 struct Z_Construct_UFunction_AResearchProjectCharacter_DoJumpEnd_Statics
@@ -151,6 +182,7 @@ void AResearchProjectCharacter::StaticRegisterNativesAResearchProjectCharacter()
 {
 	UClass* Class = AResearchProjectCharacter::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "DetachEffect", &AResearchProjectCharacter::execDetachEffect },
 		{ "DoJumpEnd", &AResearchProjectCharacter::execDoJumpEnd },
 		{ "DoJumpStart", &AResearchProjectCharacter::execDoJumpStart },
 		{ "DoMove", &AResearchProjectCharacter::execDoMove },
@@ -296,6 +328,11 @@ struct Z_Construct_UClass_AResearchProjectCharacter_Statics
 		{ "Category", "AirControl" },
 		{ "ModuleRelativePath", "ResearchProjectCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AttackEffeft_MetaData[] = {
+		{ "Category", "AirControl" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "ResearchProjectCharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PlatformerMovement_MetaData[] = {
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "ResearchProjectCharacter.h" },
@@ -312,10 +349,12 @@ struct Z_Construct_UClass_AResearchProjectCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AirDashAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_AirDirectionControl;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_AttackEffeft;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PlatformerMovement;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AResearchProjectCharacter_DetachEffect, "DetachEffect" }, // 1356915952
 		{ &Z_Construct_UFunction_AResearchProjectCharacter_DoJumpEnd, "DoJumpEnd" }, // 3528029526
 		{ &Z_Construct_UFunction_AResearchProjectCharacter_DoJumpStart, "DoJumpStart" }, // 507364724
 		{ &Z_Construct_UFunction_AResearchProjectCharacter_DoMove, "DoMove" }, // 960052738
@@ -337,6 +376,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProje
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_AirDashAction = { "AirDashAction", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, AirDashAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AirDashAction_MetaData), NewProp_AirDashAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveAction_MetaData), NewProp_MoveAction_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_AirDirectionControl = { "AirDirectionControl", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, AirDirectionControl), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AirDirectionControl_MetaData), NewProp_AirDirectionControl_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_AttackEffeft = { "AttackEffeft", nullptr, (EPropertyFlags)0x001000000008000c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, AttackEffeft), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttackEffeft_MetaData), NewProp_AttackEffeft_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_PlatformerMovement = { "PlatformerMovement", nullptr, (EPropertyFlags)0x0144000000082008, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AResearchProjectCharacter, PlatformerMovement), Z_Construct_UClass_UPlatformerMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlatformerMovement_MetaData), NewProp_PlatformerMovement_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AResearchProjectCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_CameraBoom,
@@ -350,6 +390,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AResearch
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_AirDashAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_MoveAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_AirDirectionControl,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_AttackEffeft,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AResearchProjectCharacter_Statics::NewProp_PlatformerMovement,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AResearchProjectCharacter_Statics::PropPointers) < 2048);
@@ -389,10 +430,10 @@ AResearchProjectCharacter::~AResearchProjectCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h__Script_ResearchProject_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AResearchProjectCharacter, AResearchProjectCharacter::StaticClass, TEXT("AResearchProjectCharacter"), &Z_Registration_Info_UClass_AResearchProjectCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AResearchProjectCharacter), 1792917672U) },
+		{ Z_Construct_UClass_AResearchProjectCharacter, AResearchProjectCharacter::StaticClass, TEXT("AResearchProjectCharacter"), &Z_Registration_Info_UClass_AResearchProjectCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AResearchProjectCharacter), 1527443748U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h__Script_ResearchProject_2062868705(TEXT("/Script/ResearchProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h__Script_ResearchProject_2809749052(TEXT("/Script/ResearchProject"),
 	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

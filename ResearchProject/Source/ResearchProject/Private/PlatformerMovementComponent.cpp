@@ -115,20 +115,16 @@ void UPlatformerMovementComponent::UpdateCharacterStateBeforeMovement(float Delt
 		JumpsLeft = NumberOfJumps - 1;
 	}
 
+
 	if (!IsSliding() && !IsDashing() && !IsWallJumping && !IsJumping && IsFalling())
 	{
 		ACharacter* PlayerOwner = Cast<ACharacter>(GetOwner());
 		AResearchProjectCharacter* ResearchCharacter = Cast<AResearchProjectCharacter>(PlayerOwner);
 		FString VectorAsString = ResearchCharacter->MovementValue.ToString();
-		GEngine->AddOnScreenDebugMessage(
-			-1, // Key (-1 means add a new message)
-			5.0f, // Duration in seconds
-			FColor::Green, // Text color
-			FString::Printf(TEXT("Player Velocity: %s"), *VectorAsString));
 
-		if (FMath::Abs(ResearchCharacter->MovementValue.X) <= .5)
+		if (FMath::Abs(ResearchCharacter->MovementValue.X) <= .1)
 		{
-			Velocity.X = PlayerCharacter->GetActorForwardVector().X * 100.f;
+			Velocity.X = PlayerCharacter->GetActorForwardVector().X * 100;
 			Acceleration.X = 0.f;
 		}
 	}
@@ -137,7 +133,7 @@ void UPlatformerMovementComponent::UpdateCharacterStateBeforeMovement(float Delt
 	//	-1, // Key (-1 means add a new message)
 	//	5.0f, // Duration in seconds
 	//	FColor::Green, // Text color
-	//	FString::Printf(TEXT("WallJump: %s"), IsInWallSlide ? TEXT("True") : TEXT("False")));
+	//	FString::Printf(TEXT("WallJump: %s"), WasMovingWhileJumping ? TEXT("True") : TEXT("False")));
 	//GEngine->AddOnScreenDebugMessage(
 	//-1, // Key (-1 means add a new message)
 	//5.0f, // Duration in seconds

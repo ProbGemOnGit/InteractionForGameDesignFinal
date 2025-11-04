@@ -133,7 +133,7 @@ void UPlatformerMovementComponent::UpdateCharacterStateBeforeMovement(float Delt
 	//	-1, // Key (-1 means add a new message)
 	//	5.0f, // Duration in seconds
 	//	FColor::Green, // Text color
-	//	FString::Printf(TEXT("WallJump: %s"), WasMovingWhileJumping ? TEXT("True") : TEXT("False")));
+	//	FString::Printf(TEXT("WallJump: %s"), IsSliding() ? TEXT("True") : TEXT("False")));
 	//GEngine->AddOnScreenDebugMessage(
 	//-1, // Key (-1 means add a new message)
 	//5.0f, // Duration in seconds
@@ -370,16 +370,21 @@ void UPlatformerMovementComponent::WallJumpTimerFinished()
 
 void UPlatformerMovementComponent::DashStart()
 {
-	if (IsMovingOnGround() || !IsSliding())
+
+	if (IsMovingOnGround() || IsSliding())
 	{
 		return;
 	}
 
-	if (!CanAirDash || !HasAirDash)
+	if (!HasAirDash)
 	{
 		return;
 	}
 
+	if (!CanAirDash)
+	{
+		return;
+	}
 	StopJump();
 	Velocity = FVector::ZeroVector;
 	Acceleration = FVector::ZeroVector;

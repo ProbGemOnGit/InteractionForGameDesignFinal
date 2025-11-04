@@ -51,10 +51,10 @@ public:
 	UFUNCTION(BlueprintPure) bool IsDashing() const { return IsCustomMovementMode(CMOVE_AirDash); }
 	
 	//Ability Bools
-	UPROPERTY(BlueprintReadWrite, Category = "Ability Bool") bool HasSlide = false;
-	UPROPERTY(BlueprintReadWrite, Category = "Ability Bool") bool HasWallJump = false;
-	UPROPERTY(BlueprintReadWrite, Category = "Ability Bool") bool HasSlideJump = false;
-	UPROPERTY(BlueprintReadWrite, Category = "Ability Bool") bool HasAirDash = false;
+	UPROPERTY(EditAnywhere, Category = "Ability Bool") bool HasSlide = false;
+	UPROPERTY(EditAnywhere, Category = "Ability Bool") bool HasWallJump = false;
+	UPROPERTY(EditAnywhere, Category = "Ability Bool") bool HasSlideJump = false;
+	UPROPERTY(EditAnywhere, Category = "Ability Bool") bool HasAirDash = false;
 
 	//Jump
 	void StartJump();

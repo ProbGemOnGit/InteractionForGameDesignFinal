@@ -51,10 +51,10 @@ public:
 	UFUNCTION(BlueprintPure) bool IsDashing() const { return IsCustomMovementMode(CMOVE_AirDash); }
 	
 	//Ability Bools
-	UPROPERTY(EditAnywhere, Category = "Ability Bool") bool HasSlide = false;
-	UPROPERTY(EditAnywhere, Category = "Ability Bool") bool HasWallJump = false;
-	UPROPERTY(EditAnywhere, Category = "Ability Bool") bool HasSlideJump = false;
-	UPROPERTY(EditAnywhere, Category = "Ability Bool") bool HasAirDash = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ability Bool") bool HasSlide = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ability Bool") bool HasWallJump = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ability Bool") bool HasSlideJump = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ability Bool") bool HasAirDash = false;
 
 	//Jump
 	void StartJump();
@@ -64,6 +64,8 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Jumping") float NewAirControlBoost = 25.f;
 	UPROPERTY(EditDefaultsOnly, Category = "Jumping") int NumberOfJumps = 1;
 	bool IsJumping = false;
+	bool IsFacingRight = true;
+	bool WasFacingRightWhenJump = true;
 
 	//Wall Slide
 	UPROPERTY(EditDefaultsOnly, Category = "Wall Slide") float MinHeightToSlide = 200.f;
@@ -133,6 +135,7 @@ public:
 
 	void IsLookingRight(bool lookingRight);
 	bool LookingRight = true;
+	UPROPERTY(BlueprintReadWrite, Category = "Jump")bool CanBreakWall = false;
 
 protected:
 	virtual void InitializeComponent() override;
@@ -163,6 +166,7 @@ private:
 	//Jump
 	void Jump();
 	void FinishedCoyoteTimer();
+	void JumpTimerFinsihed();
 	bool InCoyoteTime = false;
 	int JumpsLeft;
 	bool JustTouchedGround = true;
@@ -218,11 +222,11 @@ private:
 	{
 		if (!Animation)
 		{
-			GEngine->AddOnScreenDebugMessage(
-			-1, // Key (-1 means add a new message)
-			5.0f, // Duration in seconds
-			FColor::Green, // Text color
-			FString::Printf(TEXT("!Animation")));
+			//GEngine->AddOnScreenDebugMessage(
+			//-1, // Key (-1 means add a new message)
+			//5.0f, // Duration in seconds
+			//FColor::Green, // Text color
+			//FString::Printf(TEXT("!Animation")));
 			return nullptr;
 		}
 
@@ -230,19 +234,19 @@ private:
 		{
 			if (const auto AnimationNotify = Cast<AnimNotify>(NotifyEvent.Notify))
 			{
-				GEngine->AddOnScreenDebugMessage(
-					-1, // Key (-1 means add a new message)
-					5.0f, // Duration in seconds
-					FColor::Green, // Text color
-					FString::Printf(TEXT("Return notify")));
+				//GEngine->AddOnScreenDebugMessage(
+				//	-1, // Key (-1 means add a new message)
+				//	5.0f, // Duration in seconds
+				//	FColor::Green, // Text color
+				//	FString::Printf(TEXT("Return notify")));
 				return AnimationNotify;
 			}
 			else {
-				GEngine->AddOnScreenDebugMessage(
-					-1, // Key (-1 means add a new message)
-					5.0f, // Duration in seconds
-					FColor::Green, // Text color
-					FString::Printf(TEXT("else")));
+				//GEngine->AddOnScreenDebugMessage(
+				//	-1, // Key (-1 means add a new message)
+				//	5.0f, // Duration in seconds
+				//	FColor::Green, // Text color
+				//	FString::Printf(TEXT("else")));
 			}
 		}
 

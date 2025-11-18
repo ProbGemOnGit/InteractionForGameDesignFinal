@@ -73,11 +73,27 @@ void UPlatformerMovementComponent::InitializeComponent()
 
 void UPlatformerMovementComponent::UpdateCharacterStateBeforeMovement(float DeltaSeconds)
 {
+	//Get direction
+	if (PlayerCharacter->GetActorForwardVector().X > 0)
+	{
+		IsFacingRight = true;
+	}
+	else
+	{
+		IsFacingRight = false;
+	}
+
 	//Wall Slide
 	TryWallSlide();
 
 	//Mantle
 	//TryMantle();
+
+	//Check if on ground
+	if (IsMovingOnGround())
+	{
+		CanBreakWall = false;
+	}
 
 	//Slide
 	FFindFloorResult FloorHit;
@@ -97,13 +113,6 @@ void UPlatformerMovementComponent::UpdateCharacterStateBeforeMovement(float Delt
 		GetWorld()->GetTimerManager().ClearTimer(CayotoeTimer);
 		GetWorld()->GetTimerManager().SetTimer(CayotoeTimer, this, &UPlatformerMovementComponent::FinishedCoyoteTimer, CayotoeTime, false);
 	}
-
-	if (IsMovingOnGround())
-	{
-		JustTouchedGround = true;
-		InCoyoteTime = true;
-	}
-
 
 	if (IsMovingOnGround() || InCoyoteTime)
 	{
@@ -202,6 +211,7 @@ void UPlatformerMovementComponent::PhysCustom(float deltaTime, int32 Iterations)
 void UPlatformerMovementComponent::StartJump()
 {
 	HoldTimeForJump = JumpHoldTime;
+
 	if (IsInSlide)
 	{
 		if (CanSlideJump && HasSlideJump)
@@ -235,6 +245,13 @@ void UPlatformerMovementComponent::StartJump()
 		StartJumpTimers();
 		return;
 	}
+	else 
+	{
+		if (JumpsLeft == 1)
+		{
+			return;
+		}
+	}
 
 	if (IsWallSliding() && HasWallJump)
 	{
@@ -242,11 +259,28 @@ void UPlatformerMovementComponent::StartJump()
 		SetMovementMode(MOVE_Falling);
 		IsInWallSlide = true;
 		IsWallJumping = true;
-		Velocity += FVector((PlayerCharacter->GetActorForwardVector().X * -1 * WallJumpHorizontalBoost), 0.f, WallJumpVerticalBoost);
+
+		FHitResult WallHitResult;
+		FVector Start = UpdatedComponent->GetComponentLocation();
+
+		FCollisionQueryParams QueryParams = GetPlayerQueryParams();
+
+		GetWorld()->LineTraceSingleByProfile(WallHitResult, Start, EndForwardVector(Start), "BlockAll", QueryParams);
+		if (IsFacingRight)
+		{
+			
+			Velocity = FVector((-WallJumpHorizontalBoost), 0.f, WallJumpVerticalBoost);
+			WasFacingRightWhenJump = true;
+		}
+		else
+		{
+			Velocity = FVector((WallJumpHorizontalBoost), 0.f, WallJumpVerticalBoost);
+			WasFacingRightWhenJump = false;
+		}
 		HoldTimeForJump = WallJumpHoldTime;
 		ACharacter* PlayerOwner = Cast<ACharacter>(GetOwner());
 		AResearchProjectCharacter* ResearchCharacter = Cast<AResearchProjectCharacter>(PlayerOwner);
-		ResearchCharacter->SetCanMove(false);
+		//ResearchCharacter->SetCanMove(false);
 		StartJumpTimers();
 		return;
 	}
@@ -267,13 +301,14 @@ void UPlatformerMovementComponent::StartJumpTimers()
 {
 	JumpsLeft--;
 	GetWorld()->GetTimerManager().ClearTimer(JumpTimer);
-	GetWorld()->GetTimerManager().SetTimer(JumpTimer, this, &UPlatformerMovementComponent::StopJump, HoldTimeForJump, false);
+	GetWorld()->GetTimerManager().SetTimer(JumpTimer, this, &UPlatformerMovementComponent::JumpTimerFinsihed, HoldTimeForJump, false);
 	GetWorld()->GetTimerManager().SetTimer(JumpLoopTimer, this, &UPlatformerMovementComponent::Jump, .05, true);
 }
 
 void UPlatformerMovementComponent::SlideJump()
 {
 	SetMovementMode(MOVE_Falling);
+	CanBreakWall = true;
 	Velocity += FVector(PlayerCharacter->GetActorForwardVector().X * SlideHorizontalJumpForce, 0.f, SlideVerticalJumpForce);
 }
 
@@ -293,8 +328,16 @@ void UPlatformerMovementComponent::Jump()
 			const FVector Start = UpdatedComponent->GetComponentLocation();
 
 			SetMovementMode(MOVE_Falling);
-			//Velocity += HitResult.Normal * FVector(WallJumpOffHorizontalForce, 0.f, WallJumpOffVerticalForce);
-			Velocity += FVector((PlayerCharacter->GetActorForwardVector().X * -1 * WallJumpOffHorizontalForce), 0.f, WallJumpOffVerticalForce);
+
+			//if (WasFacingRightWhenJump) 
+			//{
+			//	
+			//	Velocity += FVector(-WallJumpOffHorizontalForce, 0.f, WallJumpOffVerticalForce);
+			//}
+			//else 
+			//{
+			//	Velocity += FVector(WallJumpOffHorizontalForce, 0.f, WallJumpOffVerticalForce);
+			//}
 			JustJumped = true;
 			IsInWallSlide = false;
 			GetWorld()->GetTimerManager().ClearTimer(WallJumpTimer);
@@ -304,6 +347,11 @@ void UPlatformerMovementComponent::Jump()
 	}
 }
 
+void UPlatformerMovementComponent::JumpTimerFinsihed()
+{
+	StopJump();
+}
+
 void UPlatformerMovementComponent::StopJump()
 {
 	IsJumping = false;
@@ -311,9 +359,13 @@ void UPlatformerMovementComponent::StopJump()
 	GetWorld()->GetTimerManager().ClearTimer(JumpTimer);
 	APlayerController* PlayerController = Cast<APlayerController>(CharacterOwner->GetController());
 	PlayerCharacter->EnableInput(PlayerController);
-	ACharacter* PlayerOwner = Cast<ACharacter>(GetOwner());
-	AResearchProjectCharacter* ResearchCharacter = Cast<AResearchProjectCharacter>(PlayerOwner);
-	ResearchCharacter->SetCanMove(true);
+	if (!JustJumped) 
+	{
+		ACharacter* PlayerOwner = Cast<ACharacter>(GetOwner());
+		AResearchProjectCharacter* ResearchCharacter = Cast<AResearchProjectCharacter>(PlayerOwner);
+		ResearchCharacter->SetCanMove(true);
+	}
+
 }
 
 bool UPlatformerMovementComponent::CanAttemptJump() const
@@ -324,6 +376,13 @@ bool UPlatformerMovementComponent::CanAttemptJump() const
 void UPlatformerMovementComponent::FinishedCoyoteTimer()
 {
 	InCoyoteTime = false;
+	if (IsFalling())
+	{
+		JumpsLeft = 0;
+	}
+	ACharacter* PlayerOwner = Cast<ACharacter>(GetOwner());
+	AResearchProjectCharacter* ResearchCharacter = Cast<AResearchProjectCharacter>(PlayerOwner);
+	ResearchCharacter->SetCanMove(true);
 }
 
 bool UPlatformerMovementComponent::DoJump(bool bReplayMoves)
@@ -385,6 +444,7 @@ void UPlatformerMovementComponent::DashStart()
 	{
 		return;
 	}
+	CanBreakWall = false;
 	StopJump();
 	Velocity = FVector::ZeroVector;
 	Acceleration = FVector::ZeroVector;
@@ -587,6 +647,7 @@ bool UPlatformerMovementComponent::IsTouchingWall() const
 	FCollisionQueryParams QueryParams = GetPlayerQueryParams();
 
 	GetWorld()->LineTraceSingleByProfile(WallHitResult, Start, EndForwardVector(Start), "BlockAll", QueryParams);
+
 
 	return WallHitResult.IsValidBlockingHit() || WallHitResult.bStartPenetrating;
 }
@@ -1030,11 +1091,11 @@ bool UPlatformerMovementComponent::RestoreDefaultCollisionDimension()
 	{
 		//MoveUpdatedComponent(NewLocation, UpdatedComponent->GetComponentRotation(), true);
 		PlayerCharacter->SetActorLocation(NewLocation);
-		GEngine->AddOnScreenDebugMessage(
-			-1, // Key (-1 means add a new message)
-			5.0f, // Duration in seconds
-			FColor::Green, // Text color
-			FString::Printf(TEXT("Not Falling")));
+		//GEngine->AddOnScreenDebugMessage(
+		//	-1, // Key (-1 means add a new message)
+		//	5.0f, // Duration in seconds
+		//	FColor::Green, // Text color
+		//	FString::Printf(TEXT("Not Falling")));
 	}
 	else if (HitResultFront.IsValidBlockingHit() || HitResultBack.IsValidBlockingHit() || HitResultMid.IsValidBlockingHit())
 	{

@@ -125,7 +125,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "DetachEffect")
 	void DetachEffect();
 
-	
 
 private:
 	UPROPERTY(Transient) TObjectPtr<UPlatformerMovementComponent> PlatformerMovement;

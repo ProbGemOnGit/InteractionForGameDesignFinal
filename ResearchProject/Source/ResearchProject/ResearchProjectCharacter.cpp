@@ -105,7 +105,17 @@ void AResearchProjectCharacter::AirDash()
 
 void AResearchProjectCharacter::StopMove()
 {
-	MovementValue.X = 0.f;
+
+	//GEngine->AddOnScreenDebugMessage(
+	//	-1, // Key (-1 means add a new message)
+	//	5.0f, // Duration in seconds
+	//	FColor::Green, // Text color
+	//	FString::Printf(TEXT("WallJump: %s"), justStopped ? TEXT("True") : TEXT("False")));
+
+	//MovementValue.X = 0.f;
+	PlatformerMovement->Velocity.X = 0;
+
+
 }
 
 void AResearchProjectCharacter::Move(const FInputActionValue& Value)

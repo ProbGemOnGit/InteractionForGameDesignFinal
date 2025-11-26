@@ -75,10 +75,22 @@
     <ClCompile Include="..\..\Source\ResearchProject\Private\PlatformerMovementComponent.cpp">
       <Filter>Source\ResearchProject\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ResearchProject\Private\CPPSaveGame.cpp">
+      <Filter>Source\ResearchProject\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ResearchProject\Private\CPPArraySaveGame.cpp">
+      <Filter>Source\ResearchProject\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\ResearchProject\Public">
       <UniqueIdentifier>{4E19CE01-81AD-3338-B554-25B188916707}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ResearchProject\Public\PlatformerMovementComponent.h">
+      <Filter>Source\ResearchProject\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ResearchProject\Public\CPPSaveGame.h">
+      <Filter>Source\ResearchProject\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ResearchProject\Public\CPPArraySaveGame.h">
       <Filter>Source\ResearchProject\Public</Filter>
     </ClInclude>
     <Filter Include="Source\ResearchProject\Variant_Combat">

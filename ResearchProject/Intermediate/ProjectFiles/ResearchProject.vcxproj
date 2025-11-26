@@ -282,7 +282,15 @@
     <ClCompile Include="..\..\Source\ResearchProject\Private\PlatformerMovementComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ResearchProject\Private\CPPSaveGame.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ResearchProject\Private\CPPArraySaveGame.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClInclude Include="..\..\Source\ResearchProject\Public\PlatformerMovementComponent.h"/>
+    <ClInclude Include="..\..\Source\ResearchProject\Public\CPPSaveGame.h"/>
+    <ClInclude Include="..\..\Source\ResearchProject\Public\CPPArraySaveGame.h"/>
     <ClCompile Include="..\..\Source\ResearchProject\Variant_Combat\CombatCharacter.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

@@ -24,6 +24,8 @@
 			"CombatStateTreeUtility.gen.cpp.obj"
 		],
 		"Module.ResearchProject.2.cpp.obj": [
+			"CPPArraySaveGame.gen.cpp.obj",
+			"CPPSaveGame.gen.cpp.obj",
 			"EnvQueryContext_Player.gen.cpp.obj",
 			"MantleAnimNofity.gen.cpp.obj",
 			"PlatformerMovementComponent.gen.cpp.obj",
@@ -43,14 +45,16 @@
 			"SideScrollingMovingPlatform.gen.cpp.obj",
 			"SideScrollingNPC.gen.cpp.obj",
 			"SideScrollingPickup.gen.cpp.obj",
-			"SideScrollingPlayerController.gen.cpp.obj",
-			"SideScrollingSoftPlatform.gen.cpp.obj",
-			"SideScrollingStateTreeUtility.gen.cpp.obj"
+			"SideScrollingPlayerController.gen.cpp.obj"
 		],
 		"Module.ResearchProject.3.cpp.obj": [
+			"SideScrollingSoftPlatform.gen.cpp.obj",
+			"SideScrollingStateTreeUtility.gen.cpp.obj",
 			"SideScrollingUI.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"MantleAnimNofity.cpp.obj",
+			"CPPArraySaveGame.cpp.obj",
+			"CPPSaveGame.cpp.obj",
 			"PlatformerMovementComponent.cpp.obj",
 			"ResearchProject.cpp.obj",
 			"ResearchProjectCharacter.cpp.obj",

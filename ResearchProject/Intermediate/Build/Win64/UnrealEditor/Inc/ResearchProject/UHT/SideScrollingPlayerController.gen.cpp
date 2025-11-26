@@ -230,14 +230,14 @@ ASideScrollingPlayerController::~ASideScrollingPlayerController() {}
 // ********** End Class ASideScrollingPlayerController *********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_SideScrollingPlayerController_h__Script_ResearchProject_Statics
+struct Z_CompiledInDeferFile_FID_ResearchProject_Source_ResearchProject_Variant_SideScrolling_SideScrollingPlayerController_h__Script_ResearchProject_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ASideScrollingPlayerController, ASideScrollingPlayerController::StaticClass, TEXT("ASideScrollingPlayerController"), &Z_Registration_Info_UClass_ASideScrollingPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASideScrollingPlayerController), 3021951308U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_SideScrollingPlayerController_h__Script_ResearchProject_2646043175(TEXT("/Script/ResearchProject"),
-	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_SideScrollingPlayerController_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_SideScrollingPlayerController_h__Script_ResearchProject_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ResearchProject_Source_ResearchProject_Variant_SideScrolling_SideScrollingPlayerController_h__Script_ResearchProject_2646043175(TEXT("/Script/ResearchProject"),
+	Z_CompiledInDeferFile_FID_ResearchProject_Source_ResearchProject_Variant_SideScrolling_SideScrollingPlayerController_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ResearchProject_Source_ResearchProject_Variant_SideScrolling_SideScrollingPlayerController_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

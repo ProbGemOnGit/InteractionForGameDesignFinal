@@ -37,10 +37,10 @@
 /NOIMPLIB
 /NOEXP
 /NATVIS:"../Plugins/Runtime/StateTree/Intermediate/Build/Win64/x64/UnrealEditor/Development/StateTreeModule/StateTree.natvis"
-"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Intermediate/Build/Win64/x64/UnrealEditor/Development/ResearchProject/Module.ResearchProject.1.cpp.obj"
-"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Intermediate/Build/Win64/x64/UnrealEditor/Development/ResearchProject/Module.ResearchProject.2.cpp.obj"
-"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Intermediate/Build/Win64/x64/UnrealEditor/Development/ResearchProject/Module.ResearchProject.3.cpp.obj"
-"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Intermediate/Build/Win64/x64/UnrealEditor/Development/ResearchProject/Default.rc2.res"
+"D:/BossFightOOPFinal/ResearchProject/Intermediate/Build/Win64/x64/UnrealEditor/Development/ResearchProject/Module.ResearchProject.1.cpp.obj"
+"D:/BossFightOOPFinal/ResearchProject/Intermediate/Build/Win64/x64/UnrealEditor/Development/ResearchProject/Module.ResearchProject.2.cpp.obj"
+"D:/BossFightOOPFinal/ResearchProject/Intermediate/Build/Win64/x64/UnrealEditor/Development/ResearchProject/Module.ResearchProject.3.cpp.obj"
+"D:/BossFightOOPFinal/ResearchProject/Intermediate/Build/Win64/x64/UnrealEditor/Development/ResearchProject/Default.rc2.res"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Engine/UnrealEditor-Engine.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/AIModule/UnrealEditor-AIModule.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/UMG/UnrealEditor-UMG.lib"
@@ -76,6 +76,6 @@
 "synchronization.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Binaries/Win64/UnrealEditor-ResearchProject.dll"
-/PDB:"C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Binaries/Win64/UnrealEditor-ResearchProject.pdb"
+/OUT:"D:/BossFightOOPFinal/ResearchProject/Binaries/Win64/UnrealEditor-ResearchProject.dll"
+/PDB:"D:/BossFightOOPFinal/ResearchProject/Binaries/Win64/UnrealEditor-ResearchProject.pdb"
 /ignore:4078

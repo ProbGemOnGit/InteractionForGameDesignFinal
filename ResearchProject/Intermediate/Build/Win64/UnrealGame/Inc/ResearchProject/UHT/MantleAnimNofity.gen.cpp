@@ -100,14 +100,14 @@ UMantleAnimNofity::~UMantleAnimNofity() {}
 // ********** End Class UMantleAnimNofity **********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h__Script_ResearchProject_Statics
+struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h__Script_ResearchProject_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UMantleAnimNofity, UMantleAnimNofity::StaticClass, TEXT("UMantleAnimNofity"), &Z_Registration_Info_UClass_UMantleAnimNofity, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMantleAnimNofity), 297941122U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h__Script_ResearchProject_2499186002(TEXT("/Script/ResearchProject"),
-	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h__Script_ResearchProject_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h__Script_ResearchProject_2499186002(TEXT("/Script/ResearchProject"),
+	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

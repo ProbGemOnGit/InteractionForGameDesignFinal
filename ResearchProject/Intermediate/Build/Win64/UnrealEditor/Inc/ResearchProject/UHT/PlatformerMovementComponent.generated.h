@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UPlatformerMovementComponent *********************************************
-#define FID_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execDashStart); \
 	DECLARE_FUNCTION(execDashTimelineFinished); \
 	DECLARE_FUNCTION(execDashTimelineUpdate); \
@@ -30,7 +30,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 RESEARCHPROJECT_API UClass* Z_Construct_UClass_UPlatformerMovementComponent_NoRegister();
 
-#define FID_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_INCLASS_NO_PURE_DECLS \
+#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPlatformerMovementComponent(); \
 	friend struct Z_Construct_UClass_UPlatformerMovementComponent_Statics; \
@@ -41,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(UPlatformerMovementComponent)
 
 
-#define FID_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_ENHANCED_CONSTRUCTORS \
+#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UPlatformerMovementComponent(UPlatformerMovementComponent&&) = delete; \
 	UPlatformerMovementComponent(const UPlatformerMovementComponent&) = delete; \
@@ -51,13 +51,13 @@ public: \
 	NO_API virtual ~UPlatformerMovementComponent();
 
 
-#define FID_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_38_PROLOG
-#define FID_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_GENERATED_BODY \
+#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_38_PROLOG
+#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_INCLASS_NO_PURE_DECLS \
-	FID_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_ENHANCED_CONSTRUCTORS \
+	FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_INCLASS_NO_PURE_DECLS \
+	FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h_41_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -67,7 +67,7 @@ class UPlatformerMovementComponent;
 // ********** End Class UPlatformerMovementComponent ***********************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h
+#define CURRENT_FILE_ID FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h
 
 // ********** Begin Enum ECustomMovementMode *******************************************************
 #define FOREACH_ENUM_ECUSTOMMOVEMENTMODE(op) \

@@ -232,14 +232,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(UCombatAttacker);
 // ********** End Interface UCombatAttacker ********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatAttacker_h__Script_ResearchProject_Statics
+struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatAttacker_h__Script_ResearchProject_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UCombatAttacker, UCombatAttacker::StaticClass, TEXT("UCombatAttacker"), &Z_Registration_Info_UClass_UCombatAttacker, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCombatAttacker), 1614342491U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatAttacker_h__Script_ResearchProject_1766862638(TEXT("/Script/ResearchProject"),
-	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatAttacker_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatAttacker_h__Script_ResearchProject_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatAttacker_h__Script_ResearchProject_1766862638(TEXT("/Script/ResearchProject"),
+	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatAttacker_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatAttacker_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

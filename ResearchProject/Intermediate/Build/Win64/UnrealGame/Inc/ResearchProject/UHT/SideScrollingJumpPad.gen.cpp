@@ -197,14 +197,14 @@ ASideScrollingJumpPad::~ASideScrollingJumpPad() {}
 // ********** End Class ASideScrollingJumpPad ******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingJumpPad_h__Script_ResearchProject_Statics
+struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingJumpPad_h__Script_ResearchProject_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ASideScrollingJumpPad, ASideScrollingJumpPad::StaticClass, TEXT("ASideScrollingJumpPad"), &Z_Registration_Info_UClass_ASideScrollingJumpPad, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASideScrollingJumpPad), 3693738510U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingJumpPad_h__Script_ResearchProject_2134269337(TEXT("/Script/ResearchProject"),
-	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingJumpPad_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingJumpPad_h__Script_ResearchProject_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingJumpPad_h__Script_ResearchProject_2134269337(TEXT("/Script/ResearchProject"),
+	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingJumpPad_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingJumpPad_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

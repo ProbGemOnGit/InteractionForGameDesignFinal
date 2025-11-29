@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class AResearchProjectCharacter ************************************************
-#define FID_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execDetachEffect); \
 	DECLARE_FUNCTION(execDoJumpEnd); \
 	DECLARE_FUNCTION(execDoJumpStart); \
@@ -26,7 +26,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 RESEARCHPROJECT_API UClass* Z_Construct_UClass_AResearchProjectCharacter_NoRegister();
 
-#define FID_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_INCLASS_NO_PURE_DECLS \
+#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAResearchProjectCharacter(); \
 	friend struct Z_Construct_UClass_AResearchProjectCharacter_Statics; \
@@ -37,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(AResearchProjectCharacter)
 
 
-#define FID_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_ENHANCED_CONSTRUCTORS \
+#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AResearchProjectCharacter(AResearchProjectCharacter&&) = delete; \
 	AResearchProjectCharacter(const AResearchProjectCharacter&) = delete; \
@@ -47,13 +47,13 @@ public: \
 	NO_API virtual ~AResearchProjectCharacter();
 
 
-#define FID_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_25_PROLOG
-#define FID_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_GENERATED_BODY \
+#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_25_PROLOG
+#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_INCLASS_NO_PURE_DECLS \
-	FID_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_ENHANCED_CONSTRUCTORS \
+	FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_INCLASS_NO_PURE_DECLS \
+	FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h_28_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -63,6 +63,6 @@ class AResearchProjectCharacter;
 // ********** End Class AResearchProjectCharacter **************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h
+#define CURRENT_FILE_ID FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectCharacter_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,0 +1,18 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/Jayce/Documents/GitHub/InteractionForGameDesignFinal/ResearchProject/Content/effects/slide/mat_slideLeft.uasset",
+				"C:/Users/Jayce/Documents/GitHub/InteractionForGameDesignFinal/ResearchProject/Content/effects/slide/mat_slideRight.uasset",
+				"C:/Users/Jayce/Documents/GitHub/InteractionForGameDesignFinal/ResearchProject/Content/effects/slide/n_slideLeft.uasset",
+				"C:/Users/Jayce/Documents/GitHub/InteractionForGameDesignFinal/ResearchProject/Content/effects/slide/n_slideRight.uasset",
+				"C:/Users/Jayce/Documents/GitHub/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/Characters/BP_ResearchProjectCharacter.uasset",
+				"C:/Users/Jayce/Documents/GitHub/InteractionForGameDesignFinal/ResearchProject/Content/effects/slide/flipped_3_.uasset",
+				"C:/Users/Jayce/Documents/GitHub/InteractionForGameDesignFinal/ResearchProject/Content/effects/slide/slideActual.uasset"
+			]
+		}
+	]
+}

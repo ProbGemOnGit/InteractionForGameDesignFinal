@@ -157,14 +157,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(USideScrollingInteractable);
 // ********** End Interface USideScrollingInteractable *********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h__Script_ResearchProject_Statics
+struct Z_CompiledInDeferFile_FID_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h__Script_ResearchProject_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_USideScrollingInteractable, USideScrollingInteractable::StaticClass, TEXT("USideScrollingInteractable"), &Z_Registration_Info_UClass_USideScrollingInteractable, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USideScrollingInteractable), 2861740027U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h__Script_ResearchProject_3943812430(TEXT("/Script/ResearchProject"),
-	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h__Script_ResearchProject_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h__Script_ResearchProject_3943812430(TEXT("/Script/ResearchProject"),
+	Z_CompiledInDeferFile_FID_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Interfaces_SideScrollingInteractable_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

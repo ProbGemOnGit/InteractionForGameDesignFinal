@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class AResearchProjectGameMode *************************************************
 RESEARCHPROJECT_API UClass* Z_Construct_UClass_AResearchProjectGameMode_NoRegister();
 
-#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAResearchProjectGameMode(); \
 	friend struct Z_Construct_UClass_AResearchProjectGameMode_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(AResearchProjectGameMode)
 
 
-#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h_15_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AResearchProjectGameMode(AResearchProjectGameMode&&) = delete; \
 	AResearchProjectGameMode(const AResearchProjectGameMode&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~AResearchProjectGameMode();
 
 
-#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h_12_PROLOG
-#define FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h_15_GENERATED_BODY \
+#define FID_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h_12_PROLOG
+#define FID_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h_15_ENHANCED_CONSTRUCTORS \
+	FID_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h_15_INCLASS_NO_PURE_DECLS \
+	FID_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,6 +55,6 @@ class AResearchProjectGameMode;
 // ********** End Class AResearchProjectGameMode ***************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h
+#define CURRENT_FILE_ID FID_ResearchProject_Source_ResearchProject_ResearchProjectGameMode_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\moehnj\\Downloads\\GameDeisgn\\ResearchProject\\Source\\ResearchProject\\ResearchProject.Build.cs",
-		"C:\\Users\\moehnj\\Downloads\\GameDeisgn\\ResearchProject\\Source\\ResearchProject.Target.cs",
-		"C:\\Users\\moehnj\\Downloads\\GameDeisgn\\ResearchProject\\Source\\ResearchProjectEditor.Target.cs"
+		"C:\\Users\\Jayce\\Documents\\GitHub\\InteractionForGameDesignFinal\\ResearchProject\\Source\\ResearchProject\\ResearchProject.Build.cs",
+		"C:\\Users\\Jayce\\Documents\\GitHub\\InteractionForGameDesignFinal\\ResearchProject\\Source\\ResearchProject.Target.cs",
+		"C:\\Users\\Jayce\\Documents\\GitHub\\InteractionForGameDesignFinal\\ResearchProject\\Source\\ResearchProjectEditor.Target.cs"
 	],
 	"EngineVersion": "5.6.1"
 }

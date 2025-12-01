@@ -209,14 +209,14 @@ UCombatLifeBar::~UCombatLifeBar() {}
 // ********** End Class UCombatLifeBar *************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_UI_CombatLifeBar_h__Script_ResearchProject_Statics
+struct Z_CompiledInDeferFile_FID_ResearchProject_Source_ResearchProject_Variant_Combat_UI_CombatLifeBar_h__Script_ResearchProject_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UCombatLifeBar, UCombatLifeBar::StaticClass, TEXT("UCombatLifeBar"), &Z_Registration_Info_UClass_UCombatLifeBar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCombatLifeBar), 2426938940U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_UI_CombatLifeBar_h__Script_ResearchProject_341917717(TEXT("/Script/ResearchProject"),
-	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_UI_CombatLifeBar_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_UI_CombatLifeBar_h__Script_ResearchProject_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ResearchProject_Source_ResearchProject_Variant_Combat_UI_CombatLifeBar_h__Script_ResearchProject_341917717(TEXT("/Script/ResearchProject"),
+	Z_CompiledInDeferFile_FID_ResearchProject_Source_ResearchProject_Variant_Combat_UI_CombatLifeBar_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ResearchProject_Source_ResearchProject_Variant_Combat_UI_CombatLifeBar_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

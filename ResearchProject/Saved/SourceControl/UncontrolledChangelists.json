@@ -1,0 +1,37 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/BossFight/BP_BossAi.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/7/3Y/YNI0HRHEYET974LWUUH1JV.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/BossFight/BP_BossTrigger.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/BossFight/Take_Poke.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/BossFight/Task_BossChasePlayer.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/BossFight/Task_Chop.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/BossFight/Task_Dash.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/BossFight/Task_DebugPrintString.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/BossFight/Task_DoublePoke.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/BossFight/Task_GroundSlam.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/BossFight/Task_PickAttack.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/BossFight/Boss/BP_BossAreaEffect.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/BossFight/Boss/BP_BossGroundCrystal.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/BossFight/Boss/BP_BossPokeEffect.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/EvnirementalBlueprints/BP_SavePoint.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/EvnirementalBlueprints/BP_EnvirmentalDamageHitBox.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/Enemies/BP_BaseEnemyAi.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/0/JP/YT4NQRBP5NIYIGRPRJ5185.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/1/0W/UINH14FE3DP0E9CU83CM0O.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/5/NJ/KJ3JS2NPJH3LGY7ZULSNPY.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/VN/RDWUO5LS1AZ8ZYGEB4R8U0.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/E/8A/LEJPSMUTULUSAMO9THLJ3W.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/Enemies/StateTree/Task_ChasePlayer.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/Enemies/StateTree/Task_Patrol.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/Enemies/StateTree/Task_TouchedPlayer.uasset",
+				"C:/Users/justi/Downloads/InteractionForGameDesignFinal/ResearchProject/Content/Blueprints/Enemies/StateTree/Task_TurnAround.uasset"
+			]
+		}
+	]
+}

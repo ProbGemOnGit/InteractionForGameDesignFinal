@@ -8,6 +8,7 @@
 
 void UCPPArraySaveGame::SaveArrayToFile(FString FileDirectory, FString FileName, TArray<FString> SaveText, bool& bOutSuccess)
 {
+	//not fulling implented
 	FileDirectory += "\\";
 	FileDirectory += FileName;
 	

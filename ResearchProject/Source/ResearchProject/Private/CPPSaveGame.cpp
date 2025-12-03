@@ -29,6 +29,7 @@ FString UCPPSaveGame::ReadFromFile(FString FileDirectory, FString FileName, bool
 		return "";
 	}
 
+	//returns string from file
 	bOutSuccess = true;
 	bOutMessage = "File read successfuly";
 	return readString;

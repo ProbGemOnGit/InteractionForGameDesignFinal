@@ -16,7 +16,7 @@ class RESEARCHPROJECT_API UCPPSaveGame : public UBlueprintFunctionLibrary
 
 public:
 
-	//Read from fille
+	//Read from file
 	UFUNCTION(BlueprintCallable)
 		static FString ReadFromFile(FString FileDirectory, FString FilePath, bool& bOutSuccess, FString& bOutMessage);
 

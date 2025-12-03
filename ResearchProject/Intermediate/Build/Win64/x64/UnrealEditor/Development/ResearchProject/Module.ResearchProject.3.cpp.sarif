@@ -10,13 +10,13 @@
                         "text": "'UCharacterMovementComponent::DoJump': This function has been deprecated. Please call DoJump(bool bReplayingMoves, float DeltaTime) - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
-                        "uri": "file:///C:/Users/moehnj/Downloads/GameDeisgn/ResearchProject/Intermediate/Build/Win64/x64/UnrealEditor/Development/ResearchProject/Module.ResearchProject.3.cpp"
+                        "uri": "file:///C:/Users/isaia/Downloads/InteractionForGameDesignFinal/ResearchProject/Intermediate/Build/Win64/x64/UnrealEditor/Development/ResearchProject/Module.ResearchProject.3.cpp"
                     },
                     "locations": [
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///C:/Users/moehnj/Downloads/GameDeisgn/ResearchProject/Source/ResearchProject/Private/PlatformerMovementComponent.cpp"
+                                    "uri": "file:///C:/Users/isaia/Downloads/InteractionForGameDesignFinal/ResearchProject/Source/ResearchProject/Private/PlatformerMovementComponent.cpp"
                                 },
                                 "region": {
                                     "startLine": 393,

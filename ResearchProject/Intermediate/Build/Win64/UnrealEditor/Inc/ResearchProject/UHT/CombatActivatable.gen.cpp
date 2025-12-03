@@ -259,14 +259,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(UCombatActivatable);
 // ********** End Interface UCombatActivatable *****************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatActivatable_h__Script_ResearchProject_Statics
+struct Z_CompiledInDeferFile_FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatActivatable_h__Script_ResearchProject_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UCombatActivatable, UCombatActivatable::StaticClass, TEXT("UCombatActivatable"), &Z_Registration_Info_UClass_UCombatActivatable, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCombatActivatable), 3170092585U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatActivatable_h__Script_ResearchProject_1654437356(TEXT("/Script/ResearchProject"),
-	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatActivatable_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatActivatable_h__Script_ResearchProject_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatActivatable_h__Script_ResearchProject_1654437356(TEXT("/Script/ResearchProject"),
+	Z_CompiledInDeferFile_FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatActivatable_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Combat_Interfaces_CombatActivatable_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

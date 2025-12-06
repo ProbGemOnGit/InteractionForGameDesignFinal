@@ -1,0 +1,14 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/Jayce/Documents/GitHub/InteractionForGameDesignFinal/ResearchProject/Content/effects/mat_impact.uasset",
+				"C:/Users/Jayce/Documents/GitHub/InteractionForGameDesignFinal/ResearchProject/Content/effects/n_impact.uasset",
+				"C:/Users/Jayce/Documents/GitHub/InteractionForGameDesignFinal/ResearchProject/Content/effects/impact04.uasset"
+			]
+		}
+	]
+}

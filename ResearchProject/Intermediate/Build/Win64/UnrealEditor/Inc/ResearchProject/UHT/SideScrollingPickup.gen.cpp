@@ -224,14 +224,14 @@ ASideScrollingPickup::~ASideScrollingPickup() {}
 // ********** End Class ASideScrollingPickup *******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingPickup_h__Script_ResearchProject_Statics
+struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingPickup_h__Script_ResearchProject_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ASideScrollingPickup, ASideScrollingPickup::StaticClass, TEXT("ASideScrollingPickup"), &Z_Registration_Info_UClass_ASideScrollingPickup, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASideScrollingPickup), 3187628211U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingPickup_h__Script_ResearchProject_992101073(TEXT("/Script/ResearchProject"),
-	Z_CompiledInDeferFile_FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingPickup_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingPickup_h__Script_ResearchProject_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingPickup_h__Script_ResearchProject_992101073(TEXT("/Script/ResearchProject"),
+	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingPickup_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_SideScrolling_Gameplay_SideScrollingPickup_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

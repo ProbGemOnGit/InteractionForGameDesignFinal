@@ -268,14 +268,16 @@ void UPlatformerMovementComponent::StartJump()
 		GetWorld()->LineTraceSingleByProfile(WallHitResult, Start, EndForwardVector(Start), "BlockAll", QueryParams);
 		if (IsFacingRight)
 		{
-			
-			Velocity = FVector((-WallJumpHorizontalBoost), 0.f, WallJumpVerticalBoost);
+
+			//Velocity = FVector((-WallJumpHorizontalBoost), 0.f, WallJumpVerticalBoost);
 			WasFacingRightWhenJump = true;
+			PlayerCharacter->LaunchCharacter(FVector((-WallJumpHorizontalBoost), 0.f, WallJumpVerticalBoost), true, true);
 		}
 		else
 		{
-			Velocity = FVector((WallJumpHorizontalBoost), 0.f, WallJumpVerticalBoost);
+			//Velocity = FVector((WallJumpHorizontalBoost), 0.f, WallJumpVerticalBoost);
 			WasFacingRightWhenJump = false;
+			PlayerCharacter->LaunchCharacter(FVector((WallJumpHorizontalBoost), 0.f, WallJumpVerticalBoost), true, true);
 		}
 		HoldTimeForJump = WallJumpHoldTime;
 		ACharacter* PlayerOwner = Cast<ACharacter>(GetOwner());

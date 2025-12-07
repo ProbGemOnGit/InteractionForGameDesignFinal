@@ -106,14 +106,14 @@ APlatformingGameMode::~APlatformingGameMode() {}
 // ********** End Class APlatformingGameMode *******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Platforming_PlatformingGameMode_h__Script_ResearchProject_Statics
+struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Platforming_PlatformingGameMode_h__Script_ResearchProject_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_APlatformingGameMode, APlatformingGameMode::StaticClass, TEXT("APlatformingGameMode"), &Z_Registration_Info_UClass_APlatformingGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlatformingGameMode), 2386412605U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Platforming_PlatformingGameMode_h__Script_ResearchProject_1983732442(TEXT("/Script/ResearchProject"),
-	Z_CompiledInDeferFile_FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Platforming_PlatformingGameMode_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Platforming_PlatformingGameMode_h__Script_ResearchProject_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Platforming_PlatformingGameMode_h__Script_ResearchProject_1983732442(TEXT("/Script/ResearchProject"),
+	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Platforming_PlatformingGameMode_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Platforming_PlatformingGameMode_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

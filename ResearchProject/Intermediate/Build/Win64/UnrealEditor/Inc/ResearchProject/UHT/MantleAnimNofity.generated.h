@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class UMantleAnimNofity ********************************************************
 RESEARCHPROJECT_API UClass* Z_Construct_UClass_UMantleAnimNofity_NoRegister();
 
-#define FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h_18_INCLASS_NO_PURE_DECLS \
+#define FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMantleAnimNofity(); \
 	friend struct Z_Construct_UClass_UMantleAnimNofity_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UMantleAnimNofity)
 
 
-#define FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h_18_ENHANCED_CONSTRUCTORS \
+#define FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h_18_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UMantleAnimNofity(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~UMantleAnimNofity();
 
 
-#define FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h_15_PROLOG
-#define FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h_18_GENERATED_BODY \
+#define FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h_15_PROLOG
+#define FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h_18_INCLASS_NO_PURE_DECLS \
-	FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h_18_ENHANCED_CONSTRUCTORS \
+	FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -57,6 +57,6 @@ class UMantleAnimNofity;
 // ********** End Class UMantleAnimNofity **********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_isaia_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h
+#define CURRENT_FILE_ID FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Animation_MantleAnimNofity_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

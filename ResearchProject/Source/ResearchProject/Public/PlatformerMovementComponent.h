@@ -97,6 +97,7 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "AirDash") float AirDashLength = 1.f;
 	UPROPERTY(EditDefaultsOnly, Category = "AirDash") float AirDashCoolDown = 3.f;
 	UPROPERTY(EditDefaultsOnly, Category = "AirDash") float AirDashExitBoost = 25.f;
+	UPROPERTY(BlueprintReadOnly, Category = "AirDash")bool CanAirDash = true;
 	UFUNCTION()
 	void DashTimelineUpdate(float Value);
 	UFUNCTION()
@@ -199,7 +200,7 @@ private:
 	//AriDash
 	FTimerHandle AirDashTimer;
 	void AirDashTimerFinished();
-	bool CanAirDash = true;
+
 
 	//Helpers
 	float GetCapsuleHalfHeight() const;

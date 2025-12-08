@@ -125,7 +125,8 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Slide") float SlideHorizontalJumpForce = 100.f;
 	UPROPERTY(EditDefaultsOnly, Category = "Slide") float SlideVerticalJumpForce = 100.f;
 	UPROPERTY(EditDefaultsOnly, Category = "Slide") float SlideCooldown = 2.f;
-
+	UPROPERTY(BlueprintReadWrite, Category = "Slide")bool IsInSlide = false;
+	UPROPERTY(BlueprintReadWrite, Category = "Slide")bool CanEnterSlide = true;
 
 	bool CanReturnFromSlide = true;
 
@@ -192,10 +193,10 @@ private:
 	bool CanSlideJump = false;
 	FTimerHandle SlideJumpTimer;
 	void SlideJumpTimerFinished();
-	bool IsInSlide = false;
+
 	FTimerHandle SlideCoolDownTimer;
 	void SlideCooldownFinished();
-	bool CanEnterSlide = true;
+
 
 	//AriDash
 	FTimerHandle AirDashTimer;

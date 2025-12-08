@@ -93,6 +93,7 @@ void UPlatformerMovementComponent::UpdateCharacterStateBeforeMovement(float Delt
 	if (IsMovingOnGround())
 	{
 		CanBreakWall = false;
+		JustTouchedGround = true;
 	}
 
 	//Slide
@@ -110,15 +111,16 @@ void UPlatformerMovementComponent::UpdateCharacterStateBeforeMovement(float Delt
 	if (IsFalling() && JustTouchedGround)
 	{
 		JustTouchedGround = false;
+		InCoyoteTime = true;
 		GetWorld()->GetTimerManager().ClearTimer(CayotoeTimer);
 		GetWorld()->GetTimerManager().SetTimer(CayotoeTimer, this, &UPlatformerMovementComponent::FinishedCoyoteTimer, CayotoeTime, false);
 	}
 
-	if (IsMovingOnGround() || InCoyoteTime)
-	{
-		JumpsLeft = NumberOfJumps;
-		InCoyoteTime = false;
-	}
+	//if (IsMovingOnGround() || InCoyoteTime)
+	//{
+	//	JumpsLeft = NumberOfJumps;
+	//	InCoyoteTime = false;
+	//}
 	else if (IsTouchingWall())
 	{
 		JumpsLeft = NumberOfJumps - 1;
@@ -142,7 +144,7 @@ void UPlatformerMovementComponent::UpdateCharacterStateBeforeMovement(float Delt
 	//	-1, // Key (-1 means add a new message)
 	//	5.0f, // Duration in seconds
 	//	FColor::Green, // Text color
-	//	FString::Printf(TEXT("WallJump: %s"), IsSliding() ? TEXT("True") : TEXT("False")));
+	//	FString::Printf(TEXT("WallJump: %s"), InCoyoteTime ? TEXT("True") : TEXT("False")));
 	//GEngine->AddOnScreenDebugMessage(
 	//-1, // Key (-1 means add a new message)
 	//5.0f, // Duration in seconds
@@ -211,7 +213,6 @@ void UPlatformerMovementComponent::PhysCustom(float deltaTime, int32 Iterations)
 void UPlatformerMovementComponent::StartJump()
 {
 	HoldTimeForJump = JumpHoldTime;
-
 	if (IsInSlide)
 	{
 		if (CanSlideJump && HasSlideJump)
@@ -236,12 +237,12 @@ void UPlatformerMovementComponent::StartJump()
 		return;
 	}
 
-	if (IsMovingOnGround())
+	if (IsMovingOnGround() || InCoyoteTime)
 	{
 		IsJumping = true;
 		SetMovementMode(MOVE_Falling);
 		Velocity = FVector(Velocity.X, Velocity.Y, JumpImpulseForce);
-
+		InCoyoteTime = false;
 		StartJumpTimers();
 		return;
 	}
@@ -259,6 +260,7 @@ void UPlatformerMovementComponent::StartJump()
 		SetMovementMode(MOVE_Falling);
 		IsInWallSlide = true;
 		IsWallJumping = true;
+		InCoyoteTime = false;
 
 		FHitResult WallHitResult;
 		FVector Start = UpdatedComponent->GetComponentLocation();
@@ -289,6 +291,7 @@ void UPlatformerMovementComponent::StartJump()
 	else if (JumpsLeft > 0)
 	{
 		IsJumping = true;
+		InCoyoteTime = false;
 		SetMovementMode(MOVE_Falling);
 		Velocity = FVector(Velocity.X, Velocity.Y, JumpImpulseForce);
 

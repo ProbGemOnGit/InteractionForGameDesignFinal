@@ -686,6 +686,14 @@ struct Z_Construct_UClass_UPlatformerMovementComponent_Statics
 		{ "Category", "Slide" },
 		{ "ModuleRelativePath", "Public/PlatformerMovementComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IsInSlide_MetaData[] = {
+		{ "Category", "Slide" },
+		{ "ModuleRelativePath", "Public/PlatformerMovementComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CanEnterSlide_MetaData[] = {
+		{ "Category", "Slide" },
+		{ "ModuleRelativePath", "Public/PlatformerMovementComponent.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CanBreakWall_MetaData[] = {
 		{ "Category", "Jump" },
 		{ "ModuleRelativePath", "Public/PlatformerMovementComponent.h" },
@@ -742,6 +750,10 @@ struct Z_Construct_UClass_UPlatformerMovementComponent_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SlideHorizontalJumpForce;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SlideVerticalJumpForce;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SlideCooldown;
+	static void NewProp_IsInSlide_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsInSlide;
+	static void NewProp_CanEnterSlide_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_CanEnterSlide;
 	static void NewProp_CanBreakWall_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_CanBreakWall;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -828,6 +840,16 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlatformerMove
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_SlideHorizontalJumpForce = { "SlideHorizontalJumpForce", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlatformerMovementComponent, SlideHorizontalJumpForce), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SlideHorizontalJumpForce_MetaData), NewProp_SlideHorizontalJumpForce_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_SlideVerticalJumpForce = { "SlideVerticalJumpForce", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlatformerMovementComponent, SlideVerticalJumpForce), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SlideVerticalJumpForce_MetaData), NewProp_SlideVerticalJumpForce_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_SlideCooldown = { "SlideCooldown", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlatformerMovementComponent, SlideCooldown), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SlideCooldown_MetaData), NewProp_SlideCooldown_MetaData) };
+void Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_IsInSlide_SetBit(void* Obj)
+{
+	((UPlatformerMovementComponent*)Obj)->IsInSlide = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_IsInSlide = { "IsInSlide", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UPlatformerMovementComponent), &Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_IsInSlide_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IsInSlide_MetaData), NewProp_IsInSlide_MetaData) };
+void Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_CanEnterSlide_SetBit(void* Obj)
+{
+	((UPlatformerMovementComponent*)Obj)->CanEnterSlide = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_CanEnterSlide = { "CanEnterSlide", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UPlatformerMovementComponent), &Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_CanEnterSlide_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CanEnterSlide_MetaData), NewProp_CanEnterSlide_MetaData) };
 void Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_CanBreakWall_SetBit(void* Obj)
 {
 	((UPlatformerMovementComponent*)Obj)->CanBreakWall = 1;
@@ -880,6 +902,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlatform
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_SlideHorizontalJumpForce,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_SlideVerticalJumpForce,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_SlideCooldown,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_IsInSlide,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_CanEnterSlide,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlatformerMovementComponent_Statics::NewProp_CanBreakWall,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlatformerMovementComponent_Statics::PropPointers) < 2048);
@@ -922,10 +946,10 @@ struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesign
 		{ ECustomMovementMode_StaticEnum, TEXT("ECustomMovementMode"), &Z_Registration_Info_UEnum_ECustomMovementMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 660532628U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlatformerMovementComponent, UPlatformerMovementComponent::StaticClass, TEXT("UPlatformerMovementComponent"), &Z_Registration_Info_UClass_UPlatformerMovementComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlatformerMovementComponent), 2131731880U) },
+		{ Z_Construct_UClass_UPlatformerMovementComponent, UPlatformerMovementComponent::StaticClass, TEXT("UPlatformerMovementComponent"), &Z_Registration_Info_UClass_UPlatformerMovementComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlatformerMovementComponent), 3844465463U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h__Script_ResearchProject_989010801(TEXT("/Script/ResearchProject"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h__Script_ResearchProject_3430705634(TEXT("/Script/ResearchProject"),
 	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h__Script_ResearchProject_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Public_PlatformerMovementComponent_h__Script_ResearchProject_Statics::EnumInfo));

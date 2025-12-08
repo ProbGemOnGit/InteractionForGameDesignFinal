@@ -19,7 +19,7 @@
                                     "uri": "file:///C:/Users/moehnj/Downloads/InteractionForGameDesignFinal/ResearchProject/Source/ResearchProject/Private/PlatformerMovementComponent.cpp"
                                 },
                                 "region": {
-                                    "startLine": 395,
+                                    "startLine": 398,
                                     "startColumn": 13,
                                     "snippet": {
                                         "text": "\tif (Super::DoJump(bReplayMoves))"

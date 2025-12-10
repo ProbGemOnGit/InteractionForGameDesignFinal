@@ -128,6 +128,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "Slide")bool IsInSlide = false;
 	UPROPERTY(BlueprintReadWrite, Category = "Slide")bool CanEnterSlide = true;
 
+
 	bool CanReturnFromSlide = true;
 
 	virtual void UpdateCharacterStateBeforeMovement(float deltaSeconds) override;

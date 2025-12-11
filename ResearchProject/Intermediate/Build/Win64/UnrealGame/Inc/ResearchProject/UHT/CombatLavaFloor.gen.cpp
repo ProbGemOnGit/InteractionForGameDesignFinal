@@ -228,14 +228,14 @@ ACombatLavaFloor::~ACombatLavaFloor() {}
 // ********** End Class ACombatLavaFloor ***********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_Gameplay_CombatLavaFloor_h__Script_ResearchProject_Statics
+struct Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Combat_Gameplay_CombatLavaFloor_h__Script_ResearchProject_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ACombatLavaFloor, ACombatLavaFloor::StaticClass, TEXT("ACombatLavaFloor"), &Z_Registration_Info_UClass_ACombatLavaFloor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACombatLavaFloor), 1003053010U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_Gameplay_CombatLavaFloor_h__Script_ResearchProject_3356493232(TEXT("/Script/ResearchProject"),
-	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_Gameplay_CombatLavaFloor_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_GameDeisgn_ResearchProject_Source_ResearchProject_Variant_Combat_Gameplay_CombatLavaFloor_h__Script_ResearchProject_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Combat_Gameplay_CombatLavaFloor_h__Script_ResearchProject_3356493232(TEXT("/Script/ResearchProject"),
+	Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Combat_Gameplay_CombatLavaFloor_h__Script_ResearchProject_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_moehnj_Downloads_InteractionForGameDesignFinal_ResearchProject_Source_ResearchProject_Variant_Combat_Gameplay_CombatLavaFloor_h__Script_ResearchProject_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************
